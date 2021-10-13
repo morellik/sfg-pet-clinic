@@ -8,6 +8,12 @@ import java.io.Serializable;
 
 @MappedSuperclass
 public class BaseEntity implements Serializable {
+    public BaseEntity() {
+    }
+
+    public BaseEntity(Long id) {
+        this.id = id;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
